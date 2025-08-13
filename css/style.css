@@ -18,7 +18,7 @@
 body {
     width: 100%;
     min-height: 100dvh;
-    background-color: var(--ligth);
+    background-color: var(--light);
 
 }
 
@@ -151,7 +151,7 @@ header {
 
         a.active {
             border-bottom: 1px solid var(--dark);
-            background-color: var(--ligth);
+            background-color: var(--light);
         }
     }
 }
@@ -221,7 +221,7 @@ main {
             position: absolute;
             top: -1rem;
             left: 2rem;
-            background-color: var(--ligth);
+            background-color: var(--light);
             padding: 0 .5rem;
             font-size: 1.25rem;
             font-weight: 400;
@@ -370,7 +370,7 @@ footer {
     background-color: var(--dark);
 
     p {
-        color: var(--ligth);
+        color: var(--light);
         line-height: 3rem;
     }
 }
@@ -477,7 +477,7 @@ input:checked+.slider::before {
     width: 30rem;
     max-width: 90vw;
     height: auto;
-    background-color: var(--ligth);
+    background-color: var(--light);
     border-radius: 1rem;
     padding: 1.5rem;
     display: flex;
@@ -507,7 +507,7 @@ input:checked+.slider::before {
     align-items: center;
     border-radius: 50%;
     background-color: var(--dark);
-    color: var(--ligth);
+    color: var(--light);
     font-size: 1.5rem;
     line-height: 2rem;
     cursor: pointer;
