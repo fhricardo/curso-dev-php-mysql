@@ -1,0 +1,77 @@
+<h1>Aula 3 – Variáveis e Tipos de Dados</h1>
+<h2>Variáveis</h2>
+<section>
+    <div class="text w75">
+        <p>Ao escrever algoritmos, vimos que precisamos guardar informações temporárias para
+            utilizá-las durante o processamento. No PHP (assim como em outras linguagens),
+            esses valores são armazenados em <strong>variáveis</strong>.</p>
+
+        <p>Uma variável é como uma <em>caixa com nome</em>, onde guardamos dados que podem ser
+            consultados e modificados.
+            No PHP, toda variável é identificada pelo símbolo <code>$</code> antes do nome.
+            Exemplos: <code>$idade</code>, <code>$nome</code>, <code>$aprovado</code>.</p>
+    </div>
+
+    <figure class="w25">
+        <img src="contents/assets/variable-box.svg" alt="Variável como caixa em PHP">
+        <figcaption>No PHP, variáveis começam com o símbolo $</figcaption>
+    </figure>
+</section>
+
+<h2>Tipos</h2>
+<p>No PHP, as variáveis não precisam ser declaradas com tipo fixo
+    (a linguagem é <em>fracamente tipada</em>), mas o valor que você atribui
+    define o tipo de dado que ela armazenará.</p>
+
+<p>Os principais <strong>tipos de dados</strong> em PHP são:</p>
+
+<ul>
+    <li><strong>int</strong> (inteiro) – números sem casas decimais.
+        <br>Exemplo: <code>$idade = 25;</code>
+    </li>
+
+    <li><strong>float</strong> (ou double, real) – números com casas decimais.
+        <br>Exemplo: <code>$altura = 1.75;</code>
+    </li>
+
+    <li><strong>string</strong> (texto) – conjunto de caracteres (palavras, frases, símbolos).
+        <br>Exemplo: <code>$nome = "Carlos";</code>
+    </li>
+
+    <li><strong>bool</strong> (booleano) – valores lógicos verdadeiro ou falso.
+        <br>Exemplo: <code>$aprovado = true;</code>
+    </li>
+
+    <li><strong>array</strong> – conjunto de valores organizados em lista.
+        <br>Exemplo: <code>$cores = ["azul", "verde", "vermelho"];</code>
+    </li>
+
+    <li><strong>null</strong> – representa ausência de valor.
+        <br>Exemplo: <code>$telefone = null;</code>
+    </li>
+</ul>
+
+
+<p>Exemplo em PHP juntando alguns desses tipos:</p>
+<div class="php">
+    <code><pre>
+&lt;?php
+    $nome = "Ana";       // string
+    $idade = 22;         // int
+    $altura = 1.68;      // float
+    $aprovado = true;    // bool
+    $materias = ["PHP", "MySQL", "HTML"]; // array
+
+    echo "Nome: $nome";  
+    echo "Idade: $idade anos";
+    echo "Altura: $altura m";
+    echo "Aprovado? " . ($aprovado ? "Sim" : "Não");
+?&gt;</pre></code>
+</div>
+
+<p>Compreender os tipos de dados é essencial para evitar erros e manipular informações corretamente.
+    Embora o PHP faça a conversão de tipos automaticamente em muitos casos,
+    é importante ter clareza sobre o que cada variável está armazenando.
+    Nas próximas aulas, vamos utilizar essas variáveis em estruturas de
+    <strong>decisão</strong> e <strong>repetição</strong>, tornando nossos programas cada vez mais dinâmicos.
+</p>

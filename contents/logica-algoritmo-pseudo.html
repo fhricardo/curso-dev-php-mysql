@@ -1,5 +1,5 @@
 <h1>Aula 2 – Algoritmos e Pseudocódigo</h1>
-
+<h2>Algoritmos</h2>
 <section>
     <div class="text w75">
         <p>Na aula anterior, entendemos que um <strong>algoritmo</strong> é uma sequência de passos
@@ -27,37 +27,43 @@
         <figcaption>Todo algoritmo segue esse ciclo</figcaption>
     </figure>
 </section>
+<h2>Pseudocódigo</h2>
 
-<section>
-    <figure class="w25">
-        <img src="contents/assets/pseudo-code.png" alt="Exemplo de pseudocódigo">
-        <figcaption>Pseudocódigo facilita a compreensão do algoritmo</figcaption>
-    </figure>
+<p><strong>Pseudocódigo</strong> é uma forma de escrever algoritmos em
+    <em>linguagem natural estruturada</em>, ou seja, em português, mas de forma organizada e próxima da lógica
+    das linguagens de programação. Ele não é executado pelo computador, mas serve como rascunho
+    antes de escrever o código real.
+</p>
 
-    <div class="text w75">
-        <p><strong>Pseudocódigo</strong> é uma forma de escrever algoritmos em
-            <em>linguagem natural estruturada</em>, ou seja, em português, mas de forma organizada e próxima da lógica
-            das linguagens de programação. Ele não é executado pelo computador, mas serve como rascunho
-            antes de escrever o código real.
-        </p>
+<p>Exemplo de pseudocódigo para trocar uma lâmpada:</p>
+<div class="note"><code><pre>
+inicio
+    lampadaQueimada = sim
+    lampadaNova = sim
+    retirarLampadaQueimada() {
+        pegarEscada = sim
+        subirNaEscada = sim
+        desrosquearLampadaQueimada = sim
+        colocarLampadaNova()
+    }
+    colocarLampadaNova(){
+        pegarLampadaNova = sim
+        rosquearLampadaNova = sim
+        descerDaEscada = sim
+        testarLampada()
+    }
+    testarLampada(){
+        pressioneOinterruptor = sim
+        lampadaAcende = sim
+    }
+fim</pre></code></div>
 
-        <p>Exemplo de pseudocódigo para calcular a média de duas notas:</p>
 
-        <pre>
-início
-    ler nota1
-    ler nota2
-    média ← (nota1 + nota2) / 2
-    escrever "A média é", média
-fim
-        </pre>
+<p>Além do pseudocódigo, também é comum representar algoritmos através de
+    <strong>fluxogramas</strong>, que utilizam símbolos gráficos para indicar o fluxo de execução.
+    Essa forma visual ajuda muito a compreender a lógica antes de implementar o programa.
+</p>
 
-        <p>Além do pseudocódigo, também é comum representar algoritmos através de
-            <strong>fluxogramas</strong>, que utilizam símbolos gráficos para indicar o fluxo de execução.
-            Essa forma visual ajuda muito a compreender a lógica antes de implementar o programa.
-        </p>
-    </div>
-</section>
 
 <p>Nesta aula, aprendemos que algoritmos podem ser descritos de diferentes formas,
     seja em pseudocódigo ou em fluxogramas.
