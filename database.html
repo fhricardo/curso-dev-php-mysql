@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material de Apoio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/fontawesome.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <p class="lead">Desenvolvimento PHP com Banco de Dados</p>
+            <p class="lead">https://fhricardo.github.io/curso-dev-php-mysql/</p>
+        </div>
+        <nav>
+            <h1>Bancos de Dados</h1>
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="settings.html">Configurações</a></li>
+                <li><a href="logica.html">Lógica de Programação</a></li>
+                <li><a href="php.html">PHP</a></li>
+                <li><a href="database.html">Bancos de Dados</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside class="menu">
+            <a href="#" onclick="loadPageContent('contents/db-intro.html')">Introdução</a>
+        </aside>
+        <section class="contents">
+            <h1>Introdução aos Bancos de Dados</h1>
+            <section>
+                <div class="text w75">
+                    <p>Um <strong>banco de dados</strong> é um sistema organizado para armazenar, gerenciar e recuperar
+                        informações de forma eficiente. Ele permite que aplicações e sites guardem dados de usuários,
+                        produtos, transações e qualquer outro tipo de informação essencial para o funcionamento de um
+                        sistema digital.</p>
+                    <p>A ideia de bancos de dados surgiu na década de 1960, quando sistemas de armazenamento começaram a
+                        ser utilizados em computadores de grande porte para gerenciar grandes volumes de informações.
+                        Nos anos 1970, <strong>Edgar F. Codd</strong>, pesquisador da IBM, apresentou o modelo
+                        relacional, que revolucionou o setor ao propor dados organizados em tabelas, relacionamentos e
+                        regras lógicas.
+                        Esse modelo serviu de base para sistemas que usamos até hoje.</p>
+                    <p>Na década de 1980, surgiram os primeiros <strong>Sistemas Gerenciadores de Bancos de Dados
+                            Relacionais (SGBDs)</strong>, como Oracle, DB2 e, mais tarde, o <strong>MySQL</strong> e o
+                        <strong>PostgreSQL</strong>.
+                        Esses sistemas tornaram o gerenciamento de dados mais acessível, confiável e escalável.
+                    </p>
+                    <p>Com a chegada da web e a explosão de informações digitais, novas soluções surgiram. Além dos
+                        bancos relacionais, apareceram os <strong>bancos de dados NoSQL</strong>, como MongoDB e
+                        Cassandra, que oferecem maior flexibilidade para lidar com grandes volumes de dados não
+                        estruturados, comuns em redes sociais, big data e aplicações em tempo real.</p>
+                </div>
+
+                <figure class="w25">
+                    <img src="contents/assets/database-icon.svg" alt="Ícone de Banco de Dados">
+                    <figcaption>Representação de Banco de Dados</figcaption>
+                </figure>
+            </section>
+            <section>
+                <figure class="w25">
+                    <img src="contents/assets/edgar-f-codd.jpg" alt="Edgar F. Codd">
+                    <figcaption>Edgar F. Codd, criador do modelo relacional</figcaption>
+                </figure>
+                <div class="text w75">
+                    <p>Atualmente, bancos de dados são parte fundamental de qualquer aplicação digital, desde pequenos
+                        sites até sistemas globais de alto desempenho.
+                        Eles garantem que informações sejam armazenadas com segurança, possam ser consultadas
+                        rapidamente e estejam disponíveis de forma confiável para usuários e empresas.</p>
+                    <p>No decorrer deste curso, vamos explorar conceitos básicos e avançados de bancos de dados —
+                        desde a criação de tabelas e consultas simples em SQL até a integração com linguagens de
+                        programação e aplicações web.
+                        Entender bancos de dados é essencial para qualquer desenvolvedor que deseja criar sistemas
+                        completos e eficientes.</p>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="year"></span>. Professor Flávio Ricardo.</p>
+    </footer>
+</body>
+
+</html>

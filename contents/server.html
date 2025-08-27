@@ -9,7 +9,7 @@
     conteúdo) e faça o download do arquivo .zip (<a
         href="https://www.apachelounge.com/download/VS17/binaries/httpd-2.4.65-250724-Win64-VS17.zip"
         target="_blank">Clique aqui para fazer o download direto</a>)</p>
-<p>Após o download, descompacte o arquivo e renomeie a pasta para <strong>Apache24</strong> (sim, com a primeira letra
+<p>Após o download, descompacte o arquivo e renomeie a pasta para <strong>Apache</strong> (sim, com a primeira letra
     maiúscula!)</p>
 <p>Mova a pasta para a raiz da unidade <strong>C:\</strong></p>
 <h2>Visual C++ Redistribuível</h2>
@@ -40,3 +40,14 @@
 <h2>Configurando o servidor Web Apache</h2>
 <p>Para o correto funcionamento do servidor web Apache, é necessário realizar a configuração do mesmo. Para isso, vamos
     acessar o arquivo de configuração presente em <strong>C:\Apache\conf\httpd.conf</strong></p>
+<p>O arquivo pode ser aberto com qualquer editor simples de texto, como o Bloco de Notas, ou com um editor de código,
+    como o VS Code.</p>
+<p>No arquivo, todas as linhas iniciadas pelo caractere <strong>#</strong> são linhas comentadas, ou seja, que trazem
+    apenas o descritivos sobre as configurações e exemplos. As linhas que realmente fazem a configuração do servidor não
+    devem conter o caractere <strong>#</strong>.</p>
+<h3>Configurações a serem realizadas</h3>
+<p>Diretório Raiz do Servidor: onde está localizada a pasta com os arquivos do Apache.</p>
+<div class="conf"><code><pre>Define SRVROOT "c:/Apache"
+
+ServerRoot "${SRVROOT}"</pre></code>
+</div>

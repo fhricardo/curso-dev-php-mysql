@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material de Apoio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/fontawesome.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <p class="lead">Desenvolvimento PHP com Banco de Dados</p>
+            <p class="lead">https://fhricardo.github.io/curso-dev-php-mysql/</p>
+        </div>
+        <nav>
+            <h1>Lógica de Programação</h1>
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="settings.html">Configurações</a></li>
+                <li><a href="logica.html">Lógica de Programação</a></li>
+                <li><a href="php.html">PHP</a></li>
+                <li><a href="database.html">Bancos de Dados</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside class="menu">
+            <a href="#" onclick="loadPageContent('contents/logica-intro.html')">Introdução</a>
+            <a href="#" onclick="loadPageContent('contents/logica-ex-01.html')">Exercício 01</a>
+            <a href="#" onclick="loadPageContent('contents/logica-algoritmo-pseudo.html')">Algoritmo e Pseudocódigo</a>
+            <a href="#" onclick="loadPageContent('contents/logica-ex-02.html')">Exercício 02</a>
+        </aside>
+        <section class="contents">
+            <h1>Introdução à Lógica de Programação</h1>
+            <section>
+                <div class="text w75">
+                    <p>A <strong>lógica de programação</strong> é a base para qualquer linguagem de programação.
+                        Ela consiste em organizar o pensamento de forma estruturada e sequencial,
+                        permitindo transformar problemas em soluções através de <em>passos bem definidos</em>.
+                        Mais do que aprender uma linguagem específica, dominar lógica é aprender a pensar como um
+                        programador.</p>
+
+                    <p>Com a lógica, trabalhamos com conceitos como <strong>algoritmos</strong>,
+                        <strong>estruturas de decisão</strong> (se... então... senão),
+                        <strong>estruturas de repetição</strong> (laços de execução) e
+                        <strong>variáveis</strong>, que armazenam dados temporários para manipulação.
+                        Esses blocos são universais, presentes em praticamente todas as linguagens de programação,
+                        inclusive no PHP.
+                    </p>
+                </div>
+
+                <figure class="w25">
+                    <img src="contents/assets/logica.png" alt="Diagrama representando lógica de programação">
+                    <figcaption>Fluxograma de exemplo de um algoritmo simples</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <figure class="w25">
+                    <img src="contents/assets/pseudo-code.png" alt="Exemplo de algoritmo">
+                    <figcaption>Algoritmo em pseudocódigo</figcaption>
+                </figure>
+                <div class="text w75">
+                    <p>Um <strong>algoritmo</strong> pode ser entendido como uma receita de bolo:
+                        um conjunto de instruções que devem ser seguidas em ordem para se chegar a um resultado.
+                        Essa ideia pode ser representada em forma de <em>pseudocódigo</em> ou fluxogramas,
+                        facilitando a visualização da solução antes mesmo de escrever código real.</p>
+
+                    <p>No contexto do desenvolvimento web, a lógica será aplicada no PHP
+                        para processar informações, tomar decisões e se comunicar com bancos de dados como o
+                        <strong>MySQL</strong>.
+                        Assim, conseguimos construir desde formulários de cadastro até sistemas completos de
+                        autenticação
+                        e gestão de informações.
+                    </p>
+                </div>
+            </section>
+
+            <p>A lógica de programação é o primeiro passo para se tornar um desenvolvedor.
+                Ela garante que você não apenas saiba escrever comandos em PHP,
+                mas também consiga <strong>resolver problemas de forma eficiente</strong>.
+                Neste curso, vamos começar entendendo esses fundamentos e, em seguida, aplicá-los
+                na prática com PHP e integração ao MySQL.</p>
+
+            <p>Ao dominar a lógica e o PHP juntos, você terá condições de construir
+                aplicações robustas, seguras e escaláveis.
+                Mais do que aprender uma linguagem, você estará aprendendo a pensar como um desenvolvedor.</p>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="year"></span>. Professor Flávio Ricardo.</p>
+    </footer>
+</body>
+
+</html>
