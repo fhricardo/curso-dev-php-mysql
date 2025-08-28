@@ -1,0 +1,122 @@
+<h1>Aula 06 - Operadores de Atribuição</h1>
+<h2>Operador de Atribuição</h2>
+<p>Permite atribuir valores a variáveis. Símbolo utilizado: <code>=</code></p>
+<div class="php">
+    <code><pre>&lt;?php
+    $nome = 'Flávio';
+    // Neste caso, lemos a linha acima da seguinte forma:
+    // A variável nome recebe o valor 'Flávio'
+        </pre>
+    </code>
+</div>
+<h2>Operadores de Atribuição Aritmética</h2>
+<p>também conhecidos como Operadores de Atribuição Reduzida, permitem que, além da atribuição de valores às variáveis,
+    também sejam realizadas operações aritméticas</p>
+<h3>Atribuição com Soma</h3>
+<p>Símbolo utilizado: <code>+=</code></p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = 5;
+    $a += $b; //Equivale a $a = $a + $b;
+    echo $a;  //Exibe 15</pre>
+    </code>
+</div>
+<h3>Atribuição com Subtração</h3>
+<p>Símbolo utilizado: <code>-=</code></p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = 5;
+    $a -= $b; //Equivale a $a = $a - $b;
+    echo $a;  //Exibe 5</pre>
+    </code>
+</div>
+<h3>Atribuição com Multiplicação</h3>
+<p>Símbolo utilizado: <code>*=</code></p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = 5;
+    $a *= $b; //Equivale a $a = $a * $b;
+    echo $a;  //Exibe 50</pre>
+    </code>
+</div>
+<h3>Atribuição com Divisão</h3>
+<p>Símbolo utilizado: <code>/=</code></p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = 5;
+    $a /= $b; //Equivale a $a = $a / $b;
+    echo $a;  //Exibe 2</pre>
+    </code>
+</div>
+<h3>Atribuição com Módulo</h3>
+<p>Símbolo utilizado: <code>%=</code></p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = 5;
+    $a %= $b; //Equivale a $a = $a % $b;
+    echo $a;  //Exibe 0</pre>
+    </code>
+</div>
+<h3>Atribuição com Exponenciação</h3>
+<p>Símbolo utilizado: <code>**=</code></p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = 5;
+    $a **= $b; //Equivale a $a = $a ** $b;
+    echo $a;  //Exibe 100000</pre>
+    </code>
+</div>
+<h2>Operadores de Concatenação</h2>
+<h3>Concatenação</h3>
+<p>Permite que os valores de duas ou mais variáveis ou strings sejam apresentados como um único valor. Símbolo utilizado
+    <code>.</code>
+</p>
+<p>Este operador é muito utilizado para compor frases de saída <em>(strings)</em> utilizando trechos de textos e valores
+    de strings.</p>
+<div class="php">
+    <code><pre>&lt;?php
+    $nome = 'Flávio';
+    $idade = 44;
+    $saida = $nome . " tem " . $idade . " anos.";
+    echo $saida;  //Exibe: Flávio tem 44 anos.</pre>
+    </code>
+</div>
+<h3>Atribuição com Concatenação</h3>
+<p>Permite atribuir à uma variável o valor dela concatenado com outro valor. Símbolo utilizado <code>.=</code></p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = 10;
+    $a .= $b; //Equivale a $a = $a . $b;
+    echo $a;  //Exibe 1010</pre>
+    </code>
+</div>
+<h2>Opreador de Coalescência Nula</h2>
+<p>O operador de coalescência nula foi adicionado na versão 7 do PHP como um truque sintático para o caso trivial de
+    precisar usar um ternário em conjunto com a função <code>isset()</code>. Ele retorna o primeiro operando se este
+    existir e não
+    for null; caso contrário retorna o segundo operando. Símbolo utilizado: <code>??</code></p>
+<div class="php">
+    <code>
+            <pre>&lt;?php
+    $a = 5;
+    $b = 10;
+    $saida = $a ?? $b;
+    echo $saida; // Mostra 5, pois a variável $a foi declarada e não é nula.
+
+    $b = 10;
+    $saida = $a ?? $b;
+    echo $saida; // Mostra 10, pois a variável $a não foi declarada.
+
+    $a;
+    $b = 10;
+    $saida = $a ?? $b;
+    echo $saida; // Mostra 10, pois a variável $a foi declarada mas, sem um valor atribuído, ou seja, é nula.</pre>
+        </code>
+</div>

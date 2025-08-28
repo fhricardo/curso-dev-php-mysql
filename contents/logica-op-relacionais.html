@@ -1,0 +1,124 @@
+<h1>Aula 07 - Operadores de Relacionais</h1>
+<h2>O que são Operadores Relacionais?</h2>
+<p>São os operadores utilizados para comparar <em>(ou relacionar)</em> valores fixos ou de variáveis e retornar um
+    resultado, na maioria das vezes <strong>booleano</strong>
+    (<code>true</code> ou <code>false</code>).</p>
+<h2>Operador Igualdade</h2>
+<p>Utilizado para comparar se dois valores são iguais. Símbolo utilizado: <code>==</code></p>
+<p>Este operador compara os valores mas ignora o tipo.</p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = "10";
+    var_dump($a == $b); //Retorna bool(true)</pre>
+    </code>
+</div>
+<h2>Operador Idêntico</h2>
+<p>Utilizado para comparar se dois valores são idênticos. Símbolo utilizado: <code>===</code></p>
+<p>Este operador compara os valores e o tipo, retornando <code>true</code> apenas se os dois parâmetros comparados forem
+    verdadeiros.</p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = "10";
+    var_dump($a === $b); //Retorna bool(false), uma vez que $a é do tipo int e $b é do tipo string</pre>
+    </code>
+</div>
+<h2>Operador Igualdade</h2>
+<p>Utilizado para comparar se dois valores são iguais. Símbolo utilizado: <code>==</code></p>
+<p>Este operador compara os valores mas ignora o tipo.</p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = "10";
+    var_dump($a == $b); //Retorna bool(false)</pre>
+    </code>
+</div>
+<h2>Operador Não-Igual (Diferente)</h2>
+<p>Utilizado para comparar se dois valores não são iguais. Símbolos utilizados: <code>!=</code> ou <code>&lt;&gt;</code>
+</p>
+<p>Este operador compara os valores mas ignora o tipo.</p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = "10";
+    var_dump($a != $b); //Retorna bool(false), uma vez que os dois valores são iguais.
+
+    // O mesmo ocorre em
+
+    var_dump($a &lt;&gt; $b); //Retorna bool(false), uma vez que os dois valores são iguais.</pre>
+    </code>
+</div>
+<h2>Operador Não-dêntico</h2>
+<p>Utilizado para comparar se dois valores não são idênticos. Símbolo utilizado: <code>!==</code></p>
+<p>Este operador compara os valores e o tipo, retornando <code>true</code> apenas se os dois parâmetros comparados forem
+    falsos.</p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = "10";
+    var_dump($a !== $b); //Retorna bool(true), uma vez que $a é do tipo int e $b é do tipo string</pre>
+    </code>
+</div>
+<h2>Operador Maior que</h2>
+<p>Utilizado para comparar se o valor de $a é maior do que o valor de $b. Símbolo utilizado: <code>&gt;</code></p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = 5;
+    var_dump($a &gt; $b); //Retorna bool(true), uma vez que $a é maior do que $b</pre>
+    </code>
+</div>
+<h2>Operador Menor que</h2>
+<p>Utilizado para comparar se o valor de $a é menor do que o valor de $b. Símbolo utilizado: <code>&gt;</code></p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 10;
+    $b = 5;
+    var_dump($a &lt; $b); //Retorna bool(false), uma vez que $a é maior do que $b</pre>
+    </code>
+</div>
+<h2>Operador Maior ou Igual</h2>
+<p>Utilizado para comparar se o valor de $a é maior ou igual ao valor de $b. Símbolo utilizado: <code>&gt;=</code></p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 5;
+    $b = 5;
+    var_dump($a &gt;= $b); //Retorna bool(true), uma vez que $a é igual a $b</pre>
+    </code>
+</div>
+<h2>Operador Menor ou Igual</h2>
+<p>Utilizado para comparar se o valor de $a é menor ou igual ao valor de $b. Símbolo utilizado: <code>&lt;=</code></p>
+<div class="php">
+    <code><pre>&lt;?php
+    $a = 5;
+    $b = 5;
+    var_dump($a &lt;= $b); //Retorna bool(true), uma vez que $a é igual a $b</pre>
+    </code>
+</div>
+<h2>Operador Spaceship <em>(Nave Espacial)</em></h2>
+<p>O PHP conta com um operador relacional chamado <strong>Spaceship</strong> <em>(Nave Espacial)</em>. Ao
+    contrário dos outros operadores relacionais, que retornam resultados <code>true</code> ou <code>false</code>, o
+    <strong>Spacheship</strong> retona os valores <code>-1 , 0 ou 1</code>. Símbolo utilizado:
+    <code>&lt;&equals;&gt;</code>
+</p>
+<p>O operador spaceship é utilizado para comparar duas expressões. Ele retorna -1, 0 ou 1 quando $a for
+    respectivamente menor que, igual a ou maior que $b.</p>
+<div class="php">
+    <code><pre>&lt;?php
+    // Inteiros
+    echo 1 &lt;=&gt; 1; // 0
+    echo 1 &lt;=&gt; 2; // -1
+    echo 2 &lt;=&gt; 1; // 1
+
+    // Números de ponto flutuante
+    echo 1.5 &lt;=&gt; 1.5; // 0
+    echo 1.5 &lt;=&gt; 2.5; // -1
+    echo 2.5 &lt;=&gt; 1.5; // 1
+
+    // Strings
+    echo "a" &lt;=&gt; "a"; // 0
+    echo "a" &lt;=&gt; "b"; // -1
+    echo "b" &lt;=&gt; "a"; // 1</pre>
+    </code>
+</div>
