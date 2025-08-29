@@ -1,0 +1,77 @@
+<h1>Aula 01 – O Arquivo PHP</h1>
+<p>Antes de começarmos a escrever programas mais complexos, é importante entender como funciona a estrutura de um
+    <strong>arquivo PHP</strong>. O PHP é uma linguagem de programação <em>interpretada</em>, ou seja, o código precisa
+    ser processado por um servidor que possua o <strong>interpretador PHP</strong> instalado.
+</p>
+<p>Um arquivo PHP geralmente tem a extensão <code>.php</code> e pode conter tanto código PHP quanto HTML, permitindo
+    misturar programação com conteúdo da página.</p>
+
+<h2>1. Estrutura Básica</h2>
+<p>Todo código PHP deve ser escrito dentro das tags especiais <code>&lt;?php</code> e <code>?&gt;</code></p>
+<div class="php">
+    <code>
+        <pre>&lt;?php
+    // Aqui vai o código PHP
+?&gt;</pre>
+    </code>
+</div>
+<p>Também é possível escrever código PHP dentro de arquivos HTML.</p>
+<div class="php">
+    <code>
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Meu primeiro arquivo PHP&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;?php
+        echo "Olá, mundo!";
+    ?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </code>
+</div>
+
+<h2>2. Comentários em PHP</h2>
+<p>Comentários são trechos de texto que não são executados pelo interpretador,
+    mas servem para documentar o código.
+    Existem três formas de escrever comentários em PHP:</p>
+
+<div class="php">
+    <code>
+        <pre>&lt;?php
+    // Este é um comentário de uma linha
+    # Este também é um comentário de uma linha - estilo UNIX
+    /* 
+    Este é um comentário
+    que pode ocupar várias linhas
+    */
+    echo "Comentários não aparecem na execução!";
+?&gt;</pre>
+    </code>
+</div>
+
+<h2>3. Boas Práticas</h2>
+<p>Algumas boas práticas ao criar arquivos PHP:</p>
+<ul>
+    <li>Utilizar sempre a tag completa <code>&lt;?php ?&gt;</code>, evitando a tag curta
+        <code>&lt;? ?&gt;</code>.
+    </li>
+    <li>Organizar o código com indentação e espaçamento adequado.</li>
+    <li>Usar nomes de arquivos claros e relacionados ao seu conteúdo, como <code>index.php</code> ou
+        <code>cadastro.php</code>.
+    </li>
+    <li>Comentar trechos importantes do código para facilitar a manutenção.</li>
+    <li>Separar, sempre que possível, lógica de programação do HTML (seguindo o padrão MVC em projetos maiores).
+    </li>
+</ul>
+</div>
+
+
+<p>Compreender a estrutura básica de um arquivo PHP e adotar boas práticas desde o início
+    é fundamental para escrever códigos mais organizados, fáceis de entender e de manter.
+    Agora que já sabemos estruturar nossos arquivos, podemos avançar para a criação de
+    programas mais completos.</p>
