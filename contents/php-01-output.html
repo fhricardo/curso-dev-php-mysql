@@ -1,0 +1,77 @@
+<h1>Aula 1 – Comandos de Saída em PHP</h1>
+
+<section>
+    <div class="text w75">
+        <p>Os comandos de saída são essenciais para a exibição de resultados ou de informações detalhadas para que
+            possamos verificar o correto funcionamento dos nossos códigos.</p>
+
+        <p>No PHP, os comandos de saída mais utilizados são:</p>
+        <ul>
+            <li><code>echo</code> – exibe um ou mais valores.</li>
+            <li><code>print</code> – semelhante ao <code>echo</code>, mas retorna um valor (1) e pode ser usado em
+                expressões.</li>
+            <li><code>print_r()</code> – usado para exibir arrays e informações de forma legível.</li>
+            <li><code>var_dump()</code> – mostra informações detalhadas sobre variáveis (tipo e valor).</li>
+        </ul>
+    </div>
+
+    <figure class="w50">
+        <img src="contents/assets/php-echo.svg" alt="Comando echo em PHP">
+        <figcaption>O comando <code>echo</code> é o mais usado para saída em PHP</figcaption>
+    </figure>
+</section>
+
+<h2>Comando echo</h2>
+<p>O comando <code>echo</code> é o mais simples e direto para mostrar dados na tela.</p>
+<div class="php">
+    <code><pre>&lt;?php
+    echo "Olá, mundo!";
+    echo "Bem-vindo ao curso de PHP!";
+?&gt;</pre></code>
+</div>
+
+<p>Também é possível exibir variáveis com <code>echo</code>:</p>
+<div class="php">
+    <code><pre>&lt;?php
+    $nome = "Ana";
+    $idade = 22;
+    echo "Meu nome é $nome e tenho $idade anos.";
+?&gt;</pre></code>
+</div>
+
+<h2>Comando print</h2>
+<p>O comando <code>print</code> funciona de forma semelhante ao <code>echo</code>,
+    mas tem uma pequena diferença: ele sempre retorna o valor <code>1</code>.
+    Por isso, pode ser usado em expressões.</p>
+<div class="php">
+    <code><pre>&lt;?php
+    print "Este texto foi exibido com print.";
+?&gt;</pre></code>
+</div>
+
+<h2>Comando print_r</h2>
+<p>O <code>print_r()</code> é muito útil para visualizar o conteúdo de arrays
+    de maneira mais legível.</p>
+<div class="php">
+    <code><pre>&lt;?php
+    $materias = ["PHP", "MySQL", "HTML"];
+    print_r($materias);
+?&gt;</pre></code>
+</div>
+
+<h2>Comando var_dump</h2>
+<p>O comando <code>var_dump()</code> exibe detalhes completos sobre uma variável,
+    incluindo o tipo de dado e o valor.
+    É muito usado para depuração (debug).</p>
+<div class="php">
+    <code><pre>&lt;?php
+    $idade = 22;
+    var_dump($idade);
+    $materias = ["PHP", "MySQL", "HTML"];
+    var_dump($materias);
+?&gt;</pre></code>
+</div>
+
+<p>Esses comandos de saída serão nossos primeiros aliados no PHP, pois permitem verificar
+    se o código está funcionando corretamente.
+    Com eles, já conseguimos interagir com o navegador e testar variáveis, textos e dados em geral.</p>
