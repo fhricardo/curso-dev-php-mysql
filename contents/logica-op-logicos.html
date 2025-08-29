@@ -1,35 +1,134 @@
-<h1>Aula 09 - Operadores Lógicos</h1>
-<h2>Operador Lógico NOT (Não)</h2>
-<p>Usados para combinar condições em expressões booleanas.</p>
-<ul>
-    <li><code>&&</code> → E (verdadeiro se todas as condições forem verdadeiras).</li>
-    <li><code>||</code> → Ou (verdadeiro se pelo menos uma condição for verdadeira).</li>
-    <li><code>!</code> → Negação (inverte o valor lógico).</li>
-</ul>
+<h1>Aula 9 – Operadores Lógicos em PHP</h1>
 
-<p>Exemplo:</p>
-<div class="php">
-    <code><pre>
-&lt;?php
-    $idade = 20;
-    $temCarteira = true;
+<p>Os <strong>operadores lógicos</strong> permitem combinar condições em expressões,
+    retornando resultados do tipo <code>boolean</code> (<em>true</em> ou <em>false</em>).
+    Eles são muito utilizados em estruturas de decisão como <code>if</code>,
+    <code>else</code> e <code>while</code>.
+</p>
+<p>abaixo, vamos conhecer os operadores lógicos utilizados no PHP:</p>
 
-    if ($idade >= 18 && $temCarteira) {
-        echo "Pode dirigir!";
+
+<h2>Operador NOT</h2>
+<section>
+    <div class="text w75">
+        <p>O operador <code>NOT</code> (ou NÃO) inverte o valor lógico de uma expressão:
+            transforma <code>true</code> em <code>false</code> e vice-versa.</p>
+        <p>O símbolo utilizado é: <code>!</code></p>
+        <div class="php">
+            <code><pre>&lt;?php
+    $chovendo = false;
+    if (!$chovendo) {
+        echo "Pode sair sem guarda-chuva.";
     } else {
-        echo "Não pode dirigir.";
-    }
-?&gt;</pre>
-        </code>
+        echo "Leve o guarda-chuva!";
+    }</pre>
+    </code>
+        </div>
+    </div>
+    <figure class="w25">
+        <img src="contents/assets/logical-not.svg" alt="Tabela verdade do operador NOT">
+        <figcaption>Tabela verdade do operador NOT</figcaption>
+    </figure>
+</section>
+<h2>Operador AND</h2>
+<section>
+    <div class="text w75">
+        <p>O operador <code>AND</code> (ou E) retorna <code>true</code> somente se
+            <strong>todas as condições</strong> forem verdadeiras.
+        </p>
+        <p>Os símbolos utilizados são: <code>&&</code> e <code>and</code></p>
+        <div class="php">
+            <code>
+        <pre>&lt;?php
+    $idade = 20;
+    $temCNH = true;
+    if ($idade >= 18 && $temCNH) {
+    echo "Pode dirigir.";
+    } else {
+    echo "Não pode dirigir.";
+    }</pre>
+    </code>
+        </div>
+    </div>
+    <figure class="w25">
+        <img src="contents/assets/logical-and.svg" alt="Tabela verdade do operador AND">
+        <figcaption>Tabela verdade do operador AND</figcaption>
+    </figure>
+</section>
+<div class="obs">
+    <p>Os dois símbolos, <code>&&</code> e <code>and</code> podem ser utilizados em nossos script. A diferença entre
+        eles está na ordem de precedência.</p>
 </div>
 
-</pre>
+<h2>Operador OR</h2>
+<section>
+    <div class="text w75">
+        <p>O operador <code>OR</code> (ou OU) retorna <code>true</code> se
+            <strong>pelo menos uma</strong> das condições for verdadeira.
+        </p>
+        <p>Os símbolos utilizados são: <code>||</code> e <code>or</code></p>
+        <div class="php">
+            <code>
+                <pre>&lt;?php
+    $feriado = true;
+    $fimDeSemana = false;
 
-<p>Os operadores são a base para expressar cálculos e condições em nossos programas.
-    A partir da próxima aula, vamos utilizar esses operadores em estruturas de
-    <strong>decisão</strong> (<code>if</code>, <code>else</code>, <code>switch</code>)
-    e construir programas interativos.
-</p>
-<h2>Operador Lógico OR (OU)</h2>
-<h2>Operador Lógico AND (E)</h2>
-<h2>Operador lógico XOR (OU Exclusivo)</h2>
+    if ($feriado || $fimDeSemana) {
+        echo "Hoje não tem aula!";
+    } else {
+        echo "Hoje é dia de estudar.";
+    }</pre>
+            </code>
+        </div>
+    </div>
+    <figure class="w25">
+        <img src="contents/assets/logical-or.svg" alt="Tabela verdade do operador OR">
+        <figcaption>Tabela verdade do operador OR</figcaption>
+    </figure>
+</section>
+<div class="obs">
+    <p>Os dois símbolos, <code>||</code> e <code>or</code> podem ser utilizados em nossos script. A diferença entre
+        eles está na ordem de precedência.</p>
+</div>
+<h2>Operador XOR (<code>xor</code>)</h2>
+<section>
+    <div class="text w75">
+        <p>O <strong>XOR</strong> (ou “OU exclusivo”) retorna <code>true</code> quando
+            <strong>exatamente uma</strong> das condições é verdadeira.
+            Se as duas forem <em>true</em> ou as duas forem <em>false</em>, o resultado é <code>false</code>.
+            Em PHP, o operador lógico recomendado é a palavra-chave <code>xor</code>
+            (não confundir com <code>^</code>, que é <em>bitwise</em>).
+        </p>
+
+        <p><strong>Exemplo prático:</strong> dar desconto se o cliente tiver <em>cupom</em>
+            <em>ou</em> for <em>assinante</em>, mas não os dois ao mesmo tempo.
+        </p>
+
+        <div class="php">
+            <code>
+        <pre>&lt;?php
+    $cupom = true;
+    $assinante = false;
+
+    if ($cupom xor $assinante) {
+    echo "Desconto aplicado!";
+    } else {
+    echo "Sem desconto (ou nenhum, ou ambos os critérios foram atendidos).";
+    }</pre>
+            </code>
+        </div>
+
+
+    </div>
+
+    <figure class="w25">
+        <img src="contents/assets/logical-xor.svg" alt="Tabela verdade do operador XOR">
+        <figcaption>Tabela verdade do operador XOR</figcaption>
+    </figure>
+</section>
+<div class="obs">
+    <p><strong>Atenção à precedência:</strong> <code>xor</code> tem precedência baixa em PHP.Ao misturar com atribuição
+        ou outras operações, use parênteses: <code>$resultado = (true xor false);</code></p>
+</div>
+<p>Com esses operadores, podemos criar condições mais complexas e expressivas em nossos programas. Eles serão
+    fundamentais para a construção de sistemas que tomam decisões baseadas em múltiplos fatores.</p>
