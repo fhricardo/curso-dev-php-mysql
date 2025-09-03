@@ -463,7 +463,7 @@ main {
             &::before {
                 content: "Dica \f0eb";
                 font: var(--fa-font-solid);
-                width: 100%;
+                width: calc(100% - .5rem);
                 height: 2rem;
                 background-color: darkorchid;
                 position: absolute;
