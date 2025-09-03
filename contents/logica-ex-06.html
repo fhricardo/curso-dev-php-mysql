@@ -1,1 +1,46 @@
-<h1>Aula 06 - Exercício: Operadores de Atribuição</h1>
+<h2>Aula 06 - Exercício: Operadores de Atribuição</h2>
+
+<p><strong>Objetivo:</strong> Praticar os operadores de atribuição, concatenação e coalescência nula em PHP.</p>
+
+<h3>Enunciado:</h3>
+<p>
+    Crie um arquivo chamado <code>operadores.php</code> que faça o seguinte:
+</p>
+<ol>
+    <li>Crie duas variáveis, por exemplo <code>$a</code> e <code>$b</code>, com valores inteiros atribuídos a elas.</li>
+    <li>Utilizando operadores de atribuição aritmética (<code>+=</code>, <code>-=</code>, <code>*=</code>,
+        <code>/=</code>, <code>%=</code>, <code>**=</code>), mostre o resultado de cada operação, sempre exibindo na
+        tela antes e depois da operação.
+        <br><em>Dica: use <code>echo</code> para mostrar o valor de <code>$a</code> em cada etapa.</em>
+    </li>
+    <li>Crie duas variáveis, <code>$nome</code> e <code>$idade</code>, e use o operador de concatenação (<code>.</code>)
+        para formar uma frase no formato:
+        <pre>Flávio tem 44 anos.</pre>
+    </li>
+    <li>Utilize o operador de atribuição com concatenação (<code>.=</code>) para adicionar mais uma informação à frase
+        anterior, por exemplo:
+        <pre>Flávio tem 44 anos e gosta de PHP.</pre>
+    </li>
+    <li>Por fim, crie duas variáveis, uma que esteja nula e outra com um valor inteiro. Use o operador de coalescência
+        nula (<code>??</code>) para exibir o valor correto, garantindo que nunca apareça <code>null</code> na tela.</li>
+</ol>
+
+<h3>Exemplo de saída esperada:</h3>
+<div class="browser">
+    Valor inicial de $a: 10<br>
+    Após $a += $b: 15<br>
+    Após $a -= $b: 10<br>
+    Após $a *= $b: 50<br>
+    Após $a /= $b: 10<br>
+    Após $a %= $b: 0<br>
+    Após $a **= $b: 0<br>
+    <br>
+    Flávio tem 44 anos.<br>
+    Flávio tem 44 anos e gosta de PHP.<br>
+    <br>
+    Resultado do coalescência nula: 20<br>
+</div>
+
+<div class="tip">
+    <p>Teste diferentes valores para as variáveis e veja como os operadores alteram o resultado final.</p>
+</div>
