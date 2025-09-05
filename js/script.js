@@ -153,3 +153,17 @@ document.addEventListener("click", (e) => {
         menu.classList.remove("showMenu"); console.log(menu)
     }
 });
+// Submenu
+const submenu = document.getElementById("submenu");
+// Abre/fecha o menu 
+submenu.addEventListener("click", (e) => {
+    e.stopPropagation();
+    // evita fechar imediatamente 
+    submenu.classList.toggle("showSubMenu");
+});
+// Fecha o menu ao clicar fora 
+document.addEventListener("click", (e) => {
+    if (submenu.classList.contains("showSubMenu") && !submenu.contains(e.target) && e.target !== toggleBtn) {
+        submenu.classList.remove("showSubMenu");
+    }
+});
