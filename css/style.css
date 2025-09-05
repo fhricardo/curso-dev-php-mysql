@@ -273,12 +273,13 @@ main {
 
     .menu {
         width: 15rem;
-        border-radius: 1rem;
+        height: calc(100dvh - 10rem - 2rem);
+        overflow: auto;
         display: flex;
         flex-direction: column;
 
         a {
-            width: 100%;
+            width: calc(100% - .25rem);
             height: 2rem;
             display: flex;
             padding: 0 1rem;
