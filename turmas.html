@@ -20,29 +20,27 @@
         <nav>
             <h1>Início</h1> <i class="fa-solid fa-bars fa-2xl" id="toggleMenu"></i>
             <ul id="menu">
-                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html" class="active">Início</a></li>
                 <li><a href="settings.html">Configurações</a></li>
                 <li><a href="logica.html">Lógica de Programação</a></li>
                 <li><a href="php.html">PHP</a></li>
                 <li><a href="database.html">Bancos de Dados</a></li>
-                <li><a href="sobre.html" class="active">Sobre</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h1>Sobre o material de apoio</h1>
-            <p class="lead">Este é o conteúdo de apoio do curso de Programação em PHP com Banco de Dados MySQL.</p>
-            <p class="lead">O intuito deste material é servir como referência para o desenvolvimento das atividades
-                propostas em sala de aula, além de fornecer recursos que facilitem a prática e o aprofundamento no
-                conteúdo estudado.</p>
-            <p class="lead">Aqui você encontra exemplos de código em PHP, scripts SQL para manipulação de bancos de
-                dados MySQL, exercícios práticos, além de dicas e referências para aprimorar suas habilidades no
-                desenvolvimento back-end.</p>
-            <p class="lead">Aproveite o conteúdo, pratique bastante e bons estudos!</p><br><br>
-            <p class="lead"><strong>Professor Flávio Ricardo</strong></p>
-        </section>
+        <aside class="menu">
+            <a href="#" onclick="loadPageContent('contents/turmas-home.html')">Home</a>
+            <a href="#" onclick="loadPageContent('contents/turmas-manha.html')">Turma Manhã</a>
+            <a href="#" onclick="loadPageContent('contents/turmas-tarde.html')">Turma Tarde</a>
+        </aside>
+        <section class="contents">
+            <h1>Acesso ao conteúdos das turmas</h1>
+            <h2>Segundo Semestre/2025</h2>
 
+            <p>Utilize o menu lateral para navegar no conteúdo das turmas.</p>
+        </section>
     </main>
     <footer>
         <p>&copy;<span id="year"></span>. Professor Flávio Ricardo.</p>

@@ -110,28 +110,46 @@ const closeModal = () => {
 
 
 // Inicialização quando o DOM estiver pronto
-document.addEventListener("DOMContentLoaded", () => {
-    // Configura toggle de respostas
-    setupResponseToggle();
+// document.addEventListener("DOMContentLoaded", () => {
+//     // Configura toggle de respostas
+//     setupResponseToggle();
 
-    // Configura triggers do modal
-    document.querySelectorAll(".modal-trigger").forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const url = this.getAttribute("href");
-            const target = this.getAttribute("data-target");
-            loadModalContent(url, target);
-        });
-    });
+//     // Configura triggers do modal
+//     document.querySelectorAll(".modal-trigger").forEach(link => {
+//         link.addEventListener("click", function (e) {
+//             e.preventDefault();
+//             const url = this.getAttribute("href");
+//             const target = this.getAttribute("data-target");
+//             loadModalContent(url, target);
+//         });
+//     });
 
-    // Configura fechamento do modal
-    if (modal) {
-        document.querySelector("#meuModal .close")?.addEventListener("click", closeModal);
-        modal.addEventListener("click", (e) => {
-            if (e.target === modal) closeModal();
-        });
+//     // Configura fechamento do modal
+//     if (modal) {
+//         document.querySelector("#meuModal .close")?.addEventListener("click", closeModal);
+//         modal.addEventListener("click", (e) => {
+//             if (e.target === modal) closeModal();
+//         });
+//     }
+
+//     // Configura efeito hover nas imagens
+//     setupImageHoverEffect();
+// });
+// Menu responsivo
+// Menu responsivo
+const toggleBtn = document.getElementById("toggleMenu");
+const menu = document.getElementById("menu");
+console.log(toggleBtn)
+// Abre/fecha o menu 
+toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    // evita fechar imediatamente 
+    menu.classList.toggle("showMenu");
+    console.log(menu)
+});
+// Fecha o menu ao clicar fora 
+document.addEventListener("click", (e) => {
+    if (menu.classList.contains("showMenu") && !menu.contains(e.target) && e.target !== toggleBtn) {
+        menu.classList.remove("showMenu"); console.log(menu)
     }
-
-    // Configura efeito hover nas imagens
-    setupImageHoverEffect();
 });

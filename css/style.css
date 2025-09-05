@@ -17,7 +17,8 @@
 
 body {
     width: 100%;
-    min-height: 100dvh;
+    max-width: 100;
+    height: 100dvh;
     background-color: var(--light);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -150,22 +151,31 @@ header {
     }
 
     nav {
+        flex-direction: row;
         width: 100%;
+        max-width: 100%;
         height: 5rem;
         padding: 0 2rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
 
         h1 {
             width: fit-content;
+            margin-bottom: 0;
         }
 
-        ul {
+        #toggleMenu {
+            display: none;
+        }
+
+        #menu {
             width: fit-content;
             display: flex;
             align-items: center;
             justify-content: end;
+            position: relative;
 
             li {
                 width: fit-content;
@@ -296,6 +306,7 @@ main {
         overflow: auto;
         padding: 0 1rem;
 
+
         h1 {
             width: 100%;
             font-weight: 400;
@@ -372,12 +383,39 @@ main {
             padding-left: 1rem;
         }
 
+        .list-links {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            a.btn-link {
+                width: 15rem;
+                height: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid var(--dark);
+                border-radius: .5rem;
+                color: var(--dark);
+                font-size: 1.2rem;
+
+                &:hover {
+                    border: 1px solid var(--light);
+                    color: var(--light);
+                    background-color: var(--dark);
+                }
+            }
+        }
+
         section {
             width: 100%;
             display: flex;
             align-items: flex-start;
             gap: 1rem;
             padding: 1rem 0;
+
+
 
             p {
                 padding: 0;
@@ -453,6 +491,8 @@ main {
             border-radius: .5rem;
             background-color: lavender;
             position: relative;
+            box-shadow: 0px 0px .5rem #00000040;
+            margin: 1rem 0;
 
             p {
                 line-height: 1rem;
@@ -461,10 +501,11 @@ main {
             }
 
             &::before {
-                content: "Dica \f0eb";
+                content: "\f0eb";
                 font: var(--fa-font-solid);
-                width: calc(100% - .5rem);
+                width: 100%;
                 height: 2rem;
+                box-sizing: border-box;
                 background-color: darkorchid;
                 position: absolute;
                 color: var(--light);
@@ -474,6 +515,20 @@ main {
                 display: flex;
                 align-items: center;
                 padding-left: .5rem;
+            }
+
+            &::after {
+                --text: "Dica";
+                content: var(--text);
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                height: 2rem;
+                position: absolute;
+                top: 0;
+                left: 2rem;
+                color: var(--light);
+                font-weight: bold;
             }
 
         }
@@ -939,20 +994,79 @@ input:checked+.slider::before {
 }
 
 @media(max-width: 425px) {
-    header>.top-bar {
-        width: 100%;
-        height: 3rem;
-        align-items: center;
-        justify-content: center;
-        gap: 0;
-        flex-wrap: nowrap;
-        flex-direction: column;
+    header {
+        height: 8rem;
+        position: relative;
+        z-index: 100;
 
-        .lead {
-            font-size: .875rem;
-            line-height: 1.25rem;
-            text-align: center;
-            margin: 0;
+        .top-bar {
+            width: 100%;
+            height: 3rem;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            flex-wrap: nowrap;
+            flex-direction: column;
+
+            .lead {
+                font-size: .875rem;
+                line-height: 1.25rem;
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        nav {
+            flex-direction: row-reverse;
+            align-items: center;
+            position: relative;
+            padding: 0 1rem;
+            z-index: 100;
+
+            #toggleMenu {
+                width: 3rem;
+                height: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 1rem;
+            }
+
+            h1 {
+                margin-left: 1rem;
+                font-size: 1.5rem;
+            }
+
+            #menu {
+                width: fit-content;
+                display: flex;
+                flex-direction: column;
+                background-image: var(--lingrad);
+                position: absolute;
+                top: 5rem;
+                left: 0;
+                transition: .5s;
+                z-index: 1;
+                transform: translateX(-100%);
+                will-change: transform;
+                border: 1px solid var(--mid);
+
+                li {
+                    width: 100%;
+
+                    a {
+                        width: 100%;
+                        height: 3rem;
+                        line-height: 3rem;
+                    }
+                }
+
+            }
+
+            .showMenu {
+                transform: translateX(0%) !important;
+            }
+
         }
     }
 
