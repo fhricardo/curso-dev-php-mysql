@@ -1,1 +1,59 @@
 <h1>Aula 07 - Exercício: Operadores Relacionais</h1>
+
+<p><strong>Objetivo:</strong> Praticar o uso dos operadores relacionais em PHP.</p>
+
+<h2>Enunciado:</h2>
+<p>
+    Crie um arquivo chamado <code>relacionais.php</code> que faça o seguinte:
+</p>
+<ol>
+    <li>Defina duas variáveis, por exemplo <code>$a</code> e <code>$b</code>, com valores diferentes (um inteiro e uma
+        string numérica, como <code>10</code> e <code>"10"</code>).</li>
+    <li>Utilize os operadores relacionais abaixo e exiba o resultado de cada comparação com <code>var_dump()</code>:
+        <ul>
+            <li>Igualdade (<code>==</code>)</li>
+            <li>Idêntico (<code>===</code>)</li>
+            <li>Diferente (<code>!=</code> ou <code>&lt;&gt;</code>)</li>
+            <li>Não-Idêntico (<code>!==</code>)</li>
+            <li>Maior que (<code>&gt;</code>)</li>
+            <li>Menor que (<code>&lt;</code>)</li>
+            <li>Maior ou Igual (<code>&gt;=</code>)</li>
+            <li>Menor ou Igual (<code>&lt;=</code>)</li>
+        </ul>
+    </li>
+    <li>Mostre os resultados no formato:
+        <code>$a == $b : bool(true)</code>
+    </li>
+    <li>Por fim, teste também o <strong>operador spaceship</strong> (<code>&lt;=&gt;</code>) em três situações
+        diferentes:
+        <ul>
+            <li>Comparando dois números inteiros</li>
+            <li>Comparando dois números decimais</li>
+            <li>Comparando duas strings</li>
+        </ul>
+    </li>
+</ol>
+
+<h3>Exemplo de saída esperada:</h3>
+<div class="browser">
+    <pre>
+$a == $b : bool(true)
+$a === $b : bool(false)
+$a != $b : bool(false)
+$a !== $b : bool(true)
+$a &gt; $b : bool(false)
+$a &lt; $b : bool(false)
+$a &gt;= $b : bool(true)
+$a &lt;= $b : bool(true)
+
+1 &lt;=&gt; 2 : -1
+2.5 &lt;=&gt; 1.5 : 1
+"a" &lt;=&gt; "b" : -1
+</pre>
+</div>
+
+
+<div class="tip">
+    <p>Use <code>var_dump()</code> para ver claramente os valores booleanos (<code>true</code> ou <code>false</code>)
+        retornados pelas comparações.</p>
+</div>
