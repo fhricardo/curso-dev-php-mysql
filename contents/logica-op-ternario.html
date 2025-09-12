@@ -1,1 +1,105 @@
 <h1>Aula 09 - Operador Ternário</h1>
+<section>
+    <div class="text w50">
+        <p>
+            O <strong>operador ternário</strong> é uma forma simplificada de escrever
+            estruturas <code>if...else</code>. Ele recebe esse nome porque utiliza
+            <strong>três partes</strong> em sua expressão: uma condição, um resultado
+            para <em>true</em> e um resultado para <em>false</em>.
+        </p>
+    </div>
+    <figure class="w50">
+        <img src="contents/assets/op-ternario.svg" alt="Esquema do operador ternário">
+        <figcaption>Estrutura do operador ternário</figcaption>
+    </figure>
+</section>
+
+<p>A sintaxe é:</p>
+
+<div class="php">
+    <code><pre>
+condição ? valor_se_verdadeiro : valor_se_falso;
+</pre></code>
+</div>
+
+<h2>Exemplo básico</h2>
+
+<p>
+    Suponha que você queira verificar a maioridade de uma pessoa.
+    Com <code>if...else</code> ficaria assim:
+</p>
+
+<div class="php">
+    <code><pre>&lt;?php
+$idade = 20;
+
+if ($idade >= 18) {
+    echo "Maior de idade";
+} else {
+    echo "Menor de idade";
+}
+</pre></code>
+</div>
+
+<p>Usando o operador ternário, podemos escrever a mesma lógica em uma única linha:</p>
+
+<div class="php">
+    <code><pre>&lt;?php
+$idade = 20;
+echo ($idade >= 18) ? "Maior de idade" : "Menor de idade";
+</pre></code>
+</div>
+
+
+<h2>Atribuindo valores</h2>
+
+<p>
+    O operador ternário pode ser usado também para definir o valor de uma variável
+    de acordo com uma condição:
+</p>
+
+<div class="php">
+    <code><pre>&lt;?php
+$nota = 7;
+$status = ($nota >= 6) ? "Aprovado" : "Reprovado";
+
+echo "Resultado: $status";
+</pre></code>
+</div>
+
+
+<h2>Operador Ternário Aninhado</h2>
+
+<p>
+    É possível aninhar operadores ternários, mas é preciso cuidado para não prejudicar a legibilidade.
+    Por exemplo:
+</p>
+
+<div class="php">
+    <code><pre>&lt;?php
+$nota = 8;
+
+$resultado = ($nota >= 7) ? "Aprovado" : 
+            (($nota >= 5) ? "Recuperação" : "Reprovado");
+
+echo $resultado;
+</pre></code>
+</div>
+
+<p>Nesse caso: se a nota for maior ou igual a 7 → aprovado.
+    Senão, se for maior ou igual a 5 → recuperação.
+    Caso contrário → reprovado.</p>
+
+
+<div class="tip">
+    <p>
+        O operador ternário é ótimo para simplificar código,
+        mas evite exageros. Se a expressão ficar muito longa ou difícil de entender,
+        prefira usar <code>if...else</code> tradicional.
+    </p>
+</div>
+
+<p>
+    Com o operador ternário, ganhamos uma forma curta e prática de escrever condições,
+    tornando nosso código mais enxuto e expressivo.
+</p>

@@ -1,1 +1,62 @@
-<h1>Aula 09 - Exercício: Operador Ternário</h1>
+<h1>Aula 08 e 09 - Exercício: Operadores Lógicos e Ternário</h1>
+
+<p><strong>Objetivo:</strong> Praticar o uso dos operadores lógicos e do operador ternário em PHP.</p>
+
+<h2>Enunciado:</h2>
+<p>
+    Crie uma pasta chamada <code>logicos-e-ternario</code> e dentro dela, um arquivo chamado <code>index.php</code> que
+    faça o seguinte:
+</p>
+<ol>
+    <li>Defina três variáveis:
+        <ul>
+            <li><code>$idade</code> (um número inteiro representando a idade de uma pessoa)</li>
+            <li><code>$temCNH</code> (um valor booleano: <code>true</code> ou <code>false</code>)</li>
+            <li><code>$temCarro</code> (um valor booleano: <code>true</code> ou <code>false</code>)</li>
+        </ul>
+    </li>
+    <li>Utilize os <strong>operadores lógicos</strong> para criar condições que determinem:
+        <ul>
+            <li>Se a pessoa <strong>pode dirigir</strong> (<code>idade >= 18 && $temCNH</code>)</li>
+            <li>Se a pessoa <strong>pode sair de carro</strong> (<code>$temCNH && $temCarro</code>)</li>
+            <li>Se a pessoa <strong>pode dirigir em alguma situação</strong> (<code>$temCNH || $temCarro</code>)</li>
+            <li>Se a pessoa <strong>não pode dirigir de jeito nenhum</strong> (use <code>!</code>)</li>
+        </ul>
+        Exiba o resultado de cada condição usando <code>var_dump()</code>.
+    </li>
+    <li>Agora, utilize o <strong>operador ternário</strong> para:
+        <ul>
+            <li>Exibir <code>"Maior de idade"</code> ou <code>"Menor de idade"</code>, dependendo do valor de
+                <code>$idade</code>.
+            </li>
+            <li>Armazenar em uma variável <code>$mensagem</code> o texto:
+                <ul>
+                    <li><code>"Pode dirigir e tem carro"</code> se as duas condições forem verdadeiras</li>
+                    <li><code>"Pode dirigir mas não tem carro"</code> se tiver CNH mas não carro</li>
+                    <li><code>"Não pode dirigir"</code> caso contrário</li>
+                </ul>
+            </li>
+        </ul>
+        Em seguida, mostre o conteúdo da variável <code>$mensagem</code>.
+    </li>
+</ol>
+
+<h3>Exemplo de saída esperada:</h3>
+<div class="browser">
+    <pre>
+bool(true)   // pode dirigir
+bool(false)  // pode sair de carro
+bool(true)   // pode dirigir em alguma situação
+bool(false)  // não pode dirigir de jeito nenhum
+
+Maior de idade
+Pode dirigir mas não tem carro
+</pre>
+</div>
+
+<div class="tip">
+    <p>
+        Teste diferentes valores para as variáveis <code>$idade</code>,
+        <code>$temCNH</code> e <code>$temCarro</code> para observar os resultados.
+    </p>
+</div>

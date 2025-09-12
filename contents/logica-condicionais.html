@@ -1,0 +1,127 @@
+<h1>Aula 10 – Estruturas Condicionais em PHP</h1>
+
+<p>
+    As <strong>estruturas condicionais</strong> permitem que nossos programas
+    tomem decisões de acordo com determinadas condições.
+    No PHP, temos três formas principais de estruturar decisões:
+    <code>if</code>, <code>if...else</code> e <code>switch</code>.
+</p>
+
+<h2>Estrutura <code>if</code></h2>
+
+<p>
+    O <code>if</code> é usado quando queremos executar um bloco de código
+    apenas se uma condição for <em>verdadeira</em>.
+</p>
+
+<div class="php">
+    <code>
+                <pre>&lt;?php
+$idade = 20;
+
+if ($idade >= 18) {
+    echo "Você é maior de idade.";
+}
+</pre>
+            </code>
+</div>
+
+
+<h2>Estrutura <code>if...else</code></h2>
+
+<p>
+    O <code>if...else</code> permite escolher entre dois caminhos:
+    se a condição for verdadeira, executa o primeiro bloco;
+    caso contrário, executa o bloco alternativo.
+</p>
+
+<div class="php">
+    <code>
+                <pre>&lt;?php
+$idade = 16;
+
+if ($idade >= 18) {
+    echo "Você pode dirigir.";
+} else {
+    echo "Você ainda não pode dirigir.";
+}
+</pre>
+            </code>
+</div>
+
+
+<h2>Estrutura <code>if...elseif...else</code></h2>
+
+<p>
+    Quando temos mais de duas possibilidades, podemos usar
+    <code>elseif</code> para testar múltiplas condições em sequência.
+</p>
+
+<div class="php">
+    <code>
+                <pre>&lt;?php
+$nota = 7;
+
+if ($nota >= 9) {
+    echo "Excelente!";
+} elseif ($nota >= 7) {
+    echo "Bom!";
+} elseif ($nota >= 5) {
+    echo "Recuperação!";
+} else {
+    echo "Reprovado!";
+}
+</pre>
+            </code>
+</div>
+
+
+<h2>Estrutura <code>switch</code></h2>
+
+<p>
+    O <code>switch</code> é usado quando precisamos comparar
+    uma mesma variável com vários valores possíveis.
+    É uma alternativa ao uso de vários <code>elseif</code>.
+</p>
+
+<div class="php">
+    <code>
+                <pre>&lt;?php
+$dia = "terca";
+
+switch ($dia) {
+    case "segunda":
+        echo "Início da semana!";
+        break;
+    case "terca":
+        echo "Segundo dia útil!";
+        break;
+    case "quarta":
+        echo "Metade da semana!";
+        break;
+    case "sexta":
+        echo "Sextou!";
+        break;
+    default:
+        echo "Dia comum.";
+}
+</pre>
+            </code>
+</div>
+
+
+
+
+<div class="obs">
+    <p>
+        O uso de <code>break</code> no <code>switch</code>
+        é essencial para evitar que todos os casos seguintes sejam executados.
+        Caso queira que isso aconteça de propósito, basta omitir o <code>break</code>.
+    </p>
+</div>
+
+<p>
+    As estruturas condicionais são fundamentais para qualquer programa,
+    pois permitem criar regras, validar informações e controlar o fluxo de execução.
+    Com elas, nossos scripts deixam de ser lineares e passam a responder a diferentes situações.
+</p>
