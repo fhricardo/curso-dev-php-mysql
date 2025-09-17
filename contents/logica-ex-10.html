@@ -1,1 +1,70 @@
 <h1>Aula 10 - Exercício: Estruturas Condicionais</h1>
+<p><strong>Objetivo:</strong> Colocar em prática o uso das estruturas condicionais (<code>if</code>,
+    <code>if...else</code>, <code>elseif</code> e <code>switch</code>) para resolver problemas reais.
+</p>
+<h2>Enunciado:</h2>
+<p> Você foi contratado para desenvolver um pequeno sistema de cadastro de usuários para uma plataforma fictícia chamada
+    <strong>Calabreso Play</strong>. O sistema deve receber algumas informações e, com base nelas, tomar decisões usando
+    estruturas condicionais.
+</p>
+<h3>Regras do Sistema:</h3>
+<ol>
+    <li> O usuário informa sua <strong>idade</strong>.
+        <ul>
+            <li>Se tiver <code>&lt; 13</code>: exiba
+                <code>"Você só pode acessar a área Kids."</code>
+            </li>
+            <li>Se tiver entre <code>13 e 17</code>: exiba
+                <code>"Acesso liberado, mas com conteúdo restrito."</code>
+            </li>
+            <li>Se tiver <code>&gt;= 18</code>: exiba
+                <code>"Acesso total permitido."</code>
+            </li>
+        </ul>
+    </li>
+    <li> O usuário informa sua <strong>nota em um teste de cadastro</strong> (de 0 a 10).
+        <ul>
+            <li>Se nota <code>&gt;= 9</code>: exiba <code>"Usuário nível Platina."</code></li>
+            <li>Se nota entre <code>7 e 8</code>: exiba <code>"Usuário nível Ouro."</code></li>
+            <li>Se nota entre <code>5 e 6</code>: exiba <code>"Usuário nível Prata."</code></li>
+            <li>Se nota &lt; 5: exiba <code>"Usuário nível Bronze."</code></li>
+        </ul>
+    </li>
+    <li> O usuário escolhe o <strong>plano de assinatura</strong>: <ul>
+            <li><code>1</code> – Básico</li>
+            <li><code>2</code> – Premium</li>
+            <li><code>3</code> – Família</li>
+        </ul> Use <code>switch</code> para exibir:
+        <ul>
+            <li><code>"Plano Básico: acesso limitado a filmes."</code></li>
+            <li><code>"Plano Premium: acesso a filmes e séries."</code></li>
+            <li><code>"Plano Família: acesso completo + múltiplos perfis."</code></li>
+            <li>Qualquer outro número: <code>"Plano inválido."</code></li>
+        </ul>
+    </li>
+</ol>
+<h3>Exemplo de Execução:</h3>
+<div class="browser">
+    <h2>Exemplo de Saída no Navegador:</h2>
+
+    <p><strong>Idade:</strong> 15</p>
+    <p><em>Acesso liberado, mas com conteúdo restrito.</em></p>
+
+    <p><strong>Nota:</strong> 8</p>
+    <p><em>Usuário nível Ouro.</em></p>
+
+    <p><strong>Plano escolhido:</strong> 2</p>
+    <p><em>Plano Premium: acesso a filmes e séries.</em></p>
+
+    <p><strong>Valor a pagar:</strong> R$20</p>
+</div>
+<h2>Desafio Extra <i class="fa-solid fa-skull-crossbones"></i></h2>
+<p> Peça para o sistema calcular o <strong>valor do plano</strong> escolhido, aplicando as seguintes regras: </p>
+<ul>
+    <li>Básico = R$ 20</li>
+    <li>Premium = R$ 40</li>
+    <li>Família = R$ 60</li>
+</ul>
+<p> Se o usuário tiver <strong>menos de 18 anos</strong>, aplique um <strong>desconto de 50%</strong>. Mostre no final:
+    <code>"Valor a pagar: R$XX"</code>.
+</p>
