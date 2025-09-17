@@ -1,0 +1,155 @@
+<h1>Aula 03 - Entrada de Dados com Formulários em PHP</h1>
+
+<h2>O que são Formulários?</h2>
+<p>
+    Os formulários HTML são a forma mais comum de receber informações do usuário em uma aplicação web.
+    Eles permitem a inserção de textos, números, escolhas, senhas e diversos outros tipos de dados
+    que podem ser processados pelo PHP no servidor.
+</p>
+
+<h3>O elemento &lt;form&gt;</h3>
+<p>
+    O formulário é definido pela tag <code>&lt;form&gt;</code>, que contém os campos de entrada
+    e um botão de envio (<code>submit</code>). Ele precisa ter dois atributos importantes:
+</p>
+<ul>
+    <li><code>action</code>: define para onde os dados serão enviados (página de destino).</li>
+    <li><code>method</code>: define o método de envio dos dados (<strong>GET</strong> ou <strong>POST</strong>).</li>
+</ul>
+
+<div class="html">
+    <code><pre>&lt;form method="post" action=""&gt;
+    &lt;label&gt;Nome: &lt;input type="text" name="nome"&gt;&lt;/label&gt;
+    &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;</pre>
+    </code>
+</div>
+
+<h3>Recebendo dados com PHP</h3>
+<p>
+    No PHP, usamos as <strong>variáveis superglobais</strong> <code>$_GET</code> e <code>$_POST</code>
+    para acessar os dados enviados.
+</p>
+
+<div class="php">
+    <code><pre>&lt;?php
+    if (isset($_POST['nome'])) {
+        echo "Olá, " . $_POST['nome'] . "!";
+    }
+?&gt;</pre>
+    </code>
+</div>
+
+<h2>Métodos GET e POST</h2>
+<p>
+    <strong>GET</strong>: envia os dados pela URL, visíveis e limitados em tamanho.<br>
+    <strong>POST</strong>: envia os dados no corpo da requisição, não aparecem na URL e permitem
+    quantidades maiores de informações.
+</p>
+
+<div class="php">
+    <code><pre>&lt;!-- Exemplo com GET --&gt;
+&lt;form method="get" action=""&gt;
+    &lt;label&gt;Idade: &lt;input type="number" name="idade"&gt;&lt;/label&gt;
+    &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;
+
+&lt;?php
+if (isset($_GET['idade'])) {
+    echo "Sua idade é: " . $_GET['idade'];
+}
+?&gt;</pre>
+    </code>
+</div>
+
+<h2>Trabalhando com diferentes tipos de input</h2>
+<p>Além do <code>text</code> e <code>number</code>, podemos ter vários outros tipos de campos:</p>
+<ul>
+    <li><code>password</code></li>
+    <li><code>radio</code></li>
+    <li><code>checkbox</code></li>
+    <li><code>select</code> (caixa de seleção)</li>
+    <li><code>textarea</code> (texto longo)</li>
+</ul>
+<h4>Arquivo index.php</h4>
+<div class="html">
+    <code><pre>&lt;form method="post" action="cad.php"&gt;
+    &lt;label&gt;Usuário: &lt;input type="text" name="usuario"&gt;&lt;/label&gt;&lt;br&gt;
+    &lt;label&gt;Senha: &lt;input type="password" name="senha"&gt;&lt;/label&gt;&lt;br&gt;
+    &lt;label&gt;Sexo:
+        &lt;input type="radio" name="sexo" value="M"&gt; Masculino
+        &lt;input type="radio" name="sexo" value="F"&gt; Feminino
+    &lt;/label&gt;&lt;br&gt;
+    &lt;label&gt;Interesses:
+        &lt;input type="checkbox" name="interesses[]" value="Tecnologia"&gt; Tecnologia
+        &lt;input type="checkbox" name="interesses[]" value="Esportes"&gt; Esportes
+    &lt;/label&gt;&lt;br&gt;
+    &lt;label&gt;Cidade:
+        &lt;select name="cidade"&gt;
+            &lt;option&gt;São Paulo&lt;/option&gt;
+            &lt;option&gt;Rio de Janeiro&lt;/option&gt;
+            &lt;option&gt;Curitiba&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/label&gt;&lt;br&gt;
+    &lt;input type="submit" value="Cadastrar"&gt;
+&lt;/form&gt;
+</pre>
+</code>
+</div>
+<h4>Arquivo cad.php</h4>
+<div class="php"><code><pre>&lt;?php
+if (!empty($_POST)) {
+    echo "Usuário: " . $_POST['usuario'] . "&lt;br&gt;";
+    echo "Sexo: " . $_POST['sexo'] . "&lt;br&gt;";
+    echo "Cidade: " . $_POST['cidade'] . "&lt;br&gt;";
+
+    if (isset($_POST['interesses'])) {
+        echo "Interesses: " . implode(", ", $_POST['interesses']);
+    }
+}
+?&gt;</pre>
+    </code>
+</div>
+
+<h2>Validação simples dos dados</h2>
+<p>
+    É importante validar os dados recebidos. Para isso, podemos usar funções como <code>isset()</code>,
+    <code>empty()</code> e <code>htmlspecialchars()</code> para evitar problemas de segurança.
+</p>
+
+<div class="php">
+    <code><pre>&lt;?php
+if (isset($_POST['usuario']) &amp;&amp; !empty($_POST['usuario'])) {
+    $usuario = htmlspecialchars($_POST['usuario']);
+    echo "Bem-vindo, $usuario!";
+} else {
+    echo "Por favor, informe o usuário.";
+}
+?&gt;</pre>
+    </code>
+</div>
+
+<div class="obs">
+    <ul>
+        <li>Todo campo de formulário precisa ter o atributo <code>name</code>, caso contrário o PHP não recebe o valor.
+        </li>
+        <li>O atributo <code>method</code> define como os dados chegam:
+            <ul>
+                <li><strong>GET</strong>: dados visíveis na URL.</li>
+                <li><strong>POST</strong>: dados enviados no corpo da requisição.</li>
+            </ul>
+        </li>
+        <li>Sempre valide com <code>isset()</code> e <code>empty()</code> antes de usar os valores recebidos.</li>
+        <li>Um <code>checkbox</code> não marcado não envia valor algum, então valide antes de acessar.</li>
+    </ul>
+</div>
+<div class="tip">
+    <ul>
+        <li>O atributo <code>action=""</code> pode ficar vazio quando você quiser enviar o formulário para a mesma
+            página.</li>
+        <li>Use <code>htmlspecialchars()</code> para evitar problemas de segurança e exibir os dados de forma segura.
+        </li>
+        <li>Quando tiver múltiplos valores (ex.: checkboxes), use <code>implode()</code> para juntar e exibir como
+            lista.</li>
+    </ul>
+</div>
