@@ -1,0 +1,88 @@
+<h1>Aula 11 - Exercício: Formulário com Estruturas Condicionais</h1>
+<p><strong>Objetivo:</strong> Desenvolver um sistema que recebe informações de um formulário HTML, processa com PHP
+    e utiliza condicionais para exibir mensagens personalizadas.
+</p>
+
+<h2>Enunciado:</h2>
+<p>
+    Você foi contratado pela <strong>Power Fit</strong> para criar um sistema de cadastro de novos
+    alunos.
+    O sistema deve receber os dados de um formulário HTML e processá-los em PHP, mostrando os resultados
+    com base em cálculos e estruturas condicionais.
+</p>
+
+<h3>Regras do Sistema:</h3>
+<ol>
+    <li> O formulário deve conter os seguintes campos:
+        <ul>
+            <li><strong>Idade</strong> (campo numérico)</li>
+            <li><strong>Peso</strong> (campo numérico, em kg)</li>
+            <li><strong>Altura</strong> (campo numérico, em metros, ex: 1.75)</li>
+            <li><strong>Plano</strong> (campo de seleção: 1 - Mensal, 2 - Trimestral, 3 - Anual)</li>
+            <li>Botão de envio</li>
+        </ul>
+    </li>
+    <li> O sistema deve:
+        <ul>
+            <li>Exibir a <strong>categoria do aluno</strong> pela idade:
+                <ul>
+                    <li>&lt; 18: <code>"Categoria Jovem"</code></li>
+                    <li>18 a 40: <code>"Categoria Adulto"</code></li>
+                    <li>&gt; 40: <code>"Categoria Master"</code></li>
+                </ul>
+            </li>
+            <li>Calcular o <strong>IMC</strong> com a fórmula:
+                <code>IMC = peso / (altura * altura)</code>
+            </li>
+            <li>Exibir a classificação do IMC:
+                <ul>
+                    <li>&lt; 18,5: <code>"Abaixo do peso"</code></li>
+                    <li>18,5 a 24,9: <code>"Peso normal"</code></li>
+                    <li>25 a 29,9: <code>"Sobrepeso"</code></li>
+                    <li>&gt;= 30: <code>"Obesidade"</code></li>
+                </ul>
+            </li>
+            <li>Exibir a descrição do plano escolhido usando <code>switch</code>:
+                <ul>
+                    <li>1: <code>"Plano Mensal: flexibilidade total."</code></li>
+                    <li>2: <code>"Plano Trimestral: foco em resultados de curto prazo."</code></li>
+                    <li>3: <code>"Plano Anual: máximo custo-benefício."</code></li>
+                    <li>Qualquer outro: <code>"Plano inválido."</code></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li> No final, mostre o <strong>valor do plano</strong>:
+        <ul>
+            <li>Mensal = R$ 120</li>
+            <li>Trimestral = R$ 300</li>
+            <li>Anual = R$ 1000</li>
+        </ul>
+        Se o aluno tiver IMC acima de 25, aplicar <strong>20% de desconto</strong>.
+    </li>
+</ol>
+
+<h3>Exemplo de Execução:</h3>
+<div class="browser">
+    <h2>Exemplo de Saída no Navegador:</h2>
+
+    <p><strong>Idade:</strong> 16</p>
+    <p><em>Categoria Jovem</em></p>
+
+    <p><strong>Peso:</strong> 60 kg</p>
+    <p><strong>Altura:</strong> 1.70 m</p>
+    <p><strong>IMC calculado:</strong> 20.8</p>
+    <p><em>Peso normal</em></p>
+
+    <p><strong>Plano escolhido:</strong> 1</p>
+    <p><em>Plano Mensal: flexibilidade total.</em></p>
+
+    <p><strong>Valor a pagar:</strong> R$96</p>
+</div>
+
+<h2>Desafio Extra <i class="fa-solid fa-dumbbell"></i></h2>
+<p>
+    Altere o sistema para que o formulário e os resultados fiquem na <strong>mesma página</strong>.
+    Exiba também uma <strong>mensagem de erro</strong> caso o peso ou a altura sejam iguais a zero (evitando divisão por
+    zero no cálculo do IMC).
+</p>
